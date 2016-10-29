@@ -14,6 +14,7 @@
 		C26A67971DC4C9BB0098E1E0 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A67961DC4C9BB0098E1E0 /* StationsTableViewController.swift */; };
 		C26A67991DC4D1E30098E1E0 /* WeatherStationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A67981DC4D1E30098E1E0 /* WeatherStationManager.swift */; };
 		C26A679B1DC4D1F80098E1E0 /* WeatherStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A679A1DC4D1F80098E1E0 /* WeatherStation.swift */; };
+		C2C5D98C1DC4E920008C65A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5D98B1DC4E920008C65A7 /* MapViewController.swift */; };
 		FF1124CB8D17296F54E232E2 /* Pods_WheatherStationsPOA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B532551DD8A961E801809110 /* Pods_WheatherStationsPOA.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		C26A67961DC4C9BB0098E1E0 /* StationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationsTableViewController.swift; path = WheatherStationsPOA/StationsTableViewController.swift; sourceTree = "<group>"; };
 		C26A67981DC4D1E30098E1E0 /* WeatherStationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStationManager.swift; sourceTree = "<group>"; };
 		C26A679A1DC4D1F80098E1E0 /* WeatherStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStation.swift; sourceTree = "<group>"; };
+		C2C5D98B1DC4E920008C65A7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C26A67961DC4C9BB0098E1E0 /* StationsTableViewController.swift */,
+				C2C5D98B1DC4E920008C65A7 /* MapViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -257,6 +260,7 @@
 				C26A67971DC4C9BB0098E1E0 /* StationsTableViewController.swift in Sources */,
 				C26A679B1DC4D1F80098E1E0 /* WeatherStation.swift in Sources */,
 				C21A87D01DC4C047003FEC09 /* AppDelegate.swift in Sources */,
+				C2C5D98C1DC4E920008C65A7 /* MapViewController.swift in Sources */,
 				C26A67991DC4D1E30098E1E0 /* WeatherStationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

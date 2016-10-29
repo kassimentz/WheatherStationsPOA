@@ -23,13 +23,13 @@ class StationsTableViewController: UITableViewController {
                 
                 self.weatherStations = weatherStations!
                 
-                //self.tableView.reloadData()
+                self.tableView.reloadData()
                 
-                //self.performSelector(onMainThread: #selector(NowPlayingCVController.updateCollectionView), with: nil, waitUntilDone: false)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+//                self.performSelector(onMainThread: #selector(NowPlayingCVController.updateCollectionView), with: nil, waitUntilDone: false)
+//                
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
             }
             
         }
@@ -110,14 +110,24 @@ class StationsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "mapStations", sender: weatherStations[indexPath.row])
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "mapStations" {
+            let mapViewController = segue.destination as! MapViewController
+            if let weatherStation = sender as? WeatherStation {
+                mapViewController.weatherStation = weatherStation
+                print(weatherStation)
+            }
+        }
     }
-    */
+    
 
 }

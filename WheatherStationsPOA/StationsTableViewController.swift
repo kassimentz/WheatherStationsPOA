@@ -121,7 +121,6 @@ class StationsTableViewController: UITableViewController {
             let mapViewController = segue.destination as! MapViewController
             if let weatherStation = sender as? WeatherStation {
                 mapViewController.weatherStation = weatherStation
-                print(weatherStation)
             }
         }
     }

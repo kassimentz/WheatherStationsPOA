@@ -31,22 +31,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             if let temperatura = weatherStation.temperaturaExterna {
                 annotation.title = "Temperatura: \(temperatura)"
             } else {
-                annotation.title = "Temperatura não informada"
+                annotation.title = "Temperatura: -"
             }
             if let sensacao = weatherStation.sensacaoTermica {
                 annotation.subtitle = "Sensação Térmica: \(sensacao)"
             } else {
-                annotation.subtitle = "Sensação Térmica não informada"
+                annotation.subtitle = "Sensação: -"
             }
-            
-//            let when = DispatchTime.now() + 3
-//            DispatchQueue.main.asyncAfter(deadline: when) {
-//                self.mapView.addAnnotation(annotation)
-//            }
             
             let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
             mapView.setRegion(region, animated: true)
-            
         }
     }
     
@@ -58,13 +52,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             pinAnnotationview.isDraggable = true
             pinAnnotationview.canShowCallout = true
             pinAnnotationview.animatesDrop = true
+            pinAnnotationview.rightCalloutAccessoryView = UIButton.init(type: .detailDisclosure) as UIButton
             
             return pinAnnotationview
         }
-        
         return nil
     }
 
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            performSegue(withIdentifier: "moreDetail", sender: weatherStation)
+        }
+    }
+    
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         self.mapView.addAnnotation(annotation)
     }
@@ -86,14 +86,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "moreDetail" {
+            let detailStationViewController = segue.destination as! DetailStationViewController
+            if let weatherStation = sender as? WeatherStation {
+                detailStationViewController.weatherStation = weatherStation
+            }
+        }
     }
-    */
+    
 
 }

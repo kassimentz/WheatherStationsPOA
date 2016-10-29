@@ -72,11 +72,30 @@
                     <navigationItem key="navigationItem" id="PGM-hi-KsX"/>
                     <connections>
                         <outlet property="mapView" destination="nzF-oC-ejn" id="zJe-KX-7xr"/>
+                        <segue destination="hza-mR-SMA" kind="show" identifier="moreDetail" id="3xr-G8-Um5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmw-yB-Nf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2041" y="300"/>
+        </scene>
+        <!--Detail Station View Controller-->
+        <scene sceneID="efK-DV-4ZF">
+            <objects>
+                <viewController id="hza-mR-SMA" customClass="DetailStationViewController" customModule="WheatherStationsPOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PzO-qH-Xie"/>
+                        <viewControllerLayoutGuide type="bottom" id="wUA-rt-VwV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ueP-5H-68v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNo-wh-Vpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Abc-8j-Mhu">

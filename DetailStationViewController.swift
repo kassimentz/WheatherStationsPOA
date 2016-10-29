@@ -61,8 +61,7 @@ class DetailStationViewController: UIViewController {
         self.title = "Detalhes"
         
         getDetails()
-        //weatherStation?.station
-        // Do any additional setup after loading the view.
+     
     }
 
     override func didReceiveMemoryWarning() {

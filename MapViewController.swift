@@ -27,8 +27,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
             annotation = MKPointAnnotation()
             annotation.coordinate = location
-            annotation.title = "Temperatura: \(weatherStation.temperaturaExterna!)"
-            annotation.subtitle = "Sensação Térmica: \(weatherStation.sensacaoTermica!)"
+            
+            if let temperatura = weatherStation.temperaturaExterna {
+                annotation.title = "Temperatura: \(temperatura)"
+            } else {
+                annotation.title = "Temperatura não informada"
+            }
+            if let sensacao = weatherStation.sensacaoTermica {
+                annotation.subtitle = "Sensação Térmica: \(sensacao)"
+            } else {
+                annotation.subtitle = "Sensação Térmica não informada"
+            }
             
 //            let when = DispatchTime.now() + 3
 //            DispatchQueue.main.asyncAfter(deadline: when) {

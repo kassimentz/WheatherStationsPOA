@@ -26,10 +26,7 @@ class StationsTableViewController: UITableViewController {
                 self.tableView.reloadData()
                 
 //                self.performSelector(onMainThread: #selector(NowPlayingCVController.updateCollectionView), with: nil, waitUntilDone: false)
-//                
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
+
             }
             
         }

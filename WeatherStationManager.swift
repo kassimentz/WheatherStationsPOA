@@ -30,7 +30,7 @@ class WeatherStationManager: NSObject {
                     
                 let weatherStation = WeatherStation(station: subJSON["estacao"].string,
                                                     latitude: subJSON["latitude"].double,
-                                                    longitude: subJSON["latitude"].double,
+                                                    longitude: subJSON["longitude"].double,
                                                     temperaturaExterna: subJSON["temperaturaExterna"].double,
                                                     sensacaoTermica: subJSON["sensacaoTermica"].double,
                                                     temperaturaMinimaPrevisao: subJSON["temperaturaMinimaPrevisao"].double,
